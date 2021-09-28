@@ -309,7 +309,7 @@ def test_ssg_main_command_module1(parse):
     assert dest_arg.exists, "Does the `main` function have a `dest` argument?"
 
     dest_default = dest_arg.code.value.value.replace("'", '"') == '"dist"'
-    assert dest_default, 'Does the `source` argument have a default value of `"dist"`?'
+    assert dest_default, 'Does the `dest` argument have a default value of `"dist"`?'
 
     config = ssg.get_by_value("assignment", "config", main.code)
     config_dict = ssg.flatten(config.code.value)
